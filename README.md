@@ -4,6 +4,56 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Git hooks setup
+
+1. Update to git version 2.9.0 or later
+2. Current githooks lies in .githooks folder (it lies in our version control)
+3. Set your .githooks folder as git hooks path by running : 
+```shell
+git config core.hooksPath .githooks
+```
+
+4. make this folder's hooks executable by running :
+
+```shell
+chmod +x ./.githooks/*
+```
+
+## Project structure & Conventions to be followed
+
+## nomenclature
+The name of the react component MUST be capitalised. e.g. Dashboard.js or Dashboard.jsx
+Under that file the function component MUST be defined as  function Dashboard() {}
+e.g. dashboard.js :x:
+     Dashoboard.js :white_check_mark:
+
+
+Every other file in the project which is not React Component MUST NOT have capitalized name in anyway.
+e.g. MyGraphqlQueries.js :x:
+     myGraphqlQueries.js :white_check_mark:
+
+### `App.js`
+Routes will stay here, one needs to add lazy loading for all routes except the home (or default) route.
+
+### `Containers`
+The route is considered a "container" generally and so, stored under this folder. e.g. Lets suppose one has routes "/dashboard" and a react component for the route called `<Dashboard/>`, so `Dashboard` is considered to be a container, and all the components which are used in this component will be stored under `/Components/Dahboard/`.
+
+### `Components`
+It has subfolders as per particular route as mentioned in just above section. The general components which are being used across multiple places, will be stored under `/Components/` folder.
+
+### `queries`
+The queries folder will consist of graphql queries used in diff pages. This will also follow the same structure as components. The difference is quiries file names (not folder names) will have to be lowercased and/or camelCased.
+e.g. `/queries/Dashboard/index.js`, `/queries/Dashboard/myQueries.js`
+The same applies for **`mutations`** folder.
+
+### `assets`
+This folder stores assets like images, svg etc.
+
+### `utils`
+This folder stores common functions which will be used at multiple places. One can store common hooks under `/utils/hooks` setup. If you are not aware about custom hooks visit "https://reactjs.org/docs/hooks-custom.html". Proficient way to share your hooks logic and avoid rewriting it.
+
+
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
