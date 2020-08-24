@@ -53,6 +53,16 @@ This folder stores assets like images, svg etc.
 This folder stores common functions which will be used at multiple places. One can store common hooks under `/utils/hooks` setup. If you are not aware about custom hooks visit "https://reactjs.org/docs/hooks-custom.html". Proficient way to share your hooks logic and avoid rewriting it.
 
 
+## Deployment Scripts
+We have added a script that "build"s for our staging enviornment
+`build-staging": "env-cmd -f .env.staging react-scripts build"`
+The script builds same as **build**, but forces to take `.env.staging` file into consideration.
+(Read more)[https://create-react-app.dev/docs/adding-custom-environment-variables/] about env variable is create-react-app.
+You should also be aware of the fact that, when is the particular env file is taken into consideration.
+(Which env file will be taken into consideration, is decided by the script which we run at that time. And here for building we will be using react-scripts, so the above link documentes, which fille will be taken into consideration and when.)
+This explains the use of env-cmd package. [READ MORE](https://www.npmjs.com/package/env-cmd) about this
+Env variable SHOULD be given into files and not in our scripts.
+
 
 ### `yarn start`
 
