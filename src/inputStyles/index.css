@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import url("style.css");
+@import "tailwindcss/utilities";
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply antialiased scrolling-touch font-avenirregular m-0 min-h-full relative;
+}
+#root {
+  @apply h-full;
+}
+
+.test{
+  font-family: sans-serif
+}
