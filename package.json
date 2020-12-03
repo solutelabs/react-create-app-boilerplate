@@ -26,7 +26,9 @@
     "build:tailwind": "postcss src/inputStyles/* -d src/style",
     "watch:tailwind": "postcss -w src/inputStyles -d src/style",
     "start": "run-p watch:tailwind start:react",
-    "build": "yarn run build:tailwind && react-scripts build"
+    "build": "yarn run build:tailwind && react-scripts build",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +49,12 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.1.9",
+    "@storybook/addon-essentials": "^6.1.9",
+    "@storybook/addon-links": "^6.1.9",
+    "@storybook/node-logger": "^6.1.9",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.9",
     "postcss-nested": "4.2.3"
   }
 }
