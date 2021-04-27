@@ -8,12 +8,13 @@ html {
 }
 
 body {
-  @apply antialiased scrolling-touch font-avenirregular m-0 min-h-full relative;
+  @apply antialiased font-avenirregular m-0 min-h-full relative;
 }
+
 #root {
   @apply h-full;
 }
 
-.test{
-  font-family: sans-serif
+.test {
+  font-family: sans-serif;
 }
