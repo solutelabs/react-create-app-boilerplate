@@ -57,8 +57,5 @@ module.exports = {
     backgroundSize: {},
     letterSpacing: {},
   },
-  experimental: {
-    defaultLineHeights: true,
-  },
   backgroundColor: ["responsive", "hover", "focus"],
 };
