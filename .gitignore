@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+/package-lock.json
 /node_modules
 /.pnp
 .pnp.js
@@ -10,9 +11,6 @@
 
 # production
 /build
-
-# css
-/src/style/*
 
 # misc
 .DS_Store
